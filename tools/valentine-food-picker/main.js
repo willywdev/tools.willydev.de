@@ -14,6 +14,24 @@ const videos = {
     ]
                 };
 
+const restaurants = {
+    burger: ["Devrans", "McDonalds", "Delfi Grill"],
+    indisch: ["Bombay Wuppertal", "Delhi Roma"],
+    arabPizza:["Devrans", "2M Grill", "Döner Planet"] ,
+    italPizza: ["Tonys Pizzeria", "Dominos"],
+    sushi: ["King Sushi", "Sushi Hub", "Langerfelder Nem Sushi"],
+    doener: ["Devrans", "Royal Döner", "Istanbul Grill"],
+    cheap: ["Ferman Nachtexpress", "Amirco Pizza & Pasta", "Spices"],
+    thumbnails: ["images/burger.jpg",
+                "images/indisch.jpg",
+                "images/arabpizza.jpg",
+                "images/italpizza.jpg",
+                "images/sushi.jpg",
+                "images/doener.jpg",
+                "images/cheap.jpg"
+            ]
+}
+
 function hideSecondStageButtons() {
     const secondStageButtonsFood = document.querySelectorAll('.secondStageFood');
     secondStageButtonsFood.forEach(element => {
@@ -47,7 +65,18 @@ function showSecondStageButtons() {
     hideFirstStageButtons();
 }
 
+function showBackButton() {
+    const backButton = document.querySelector('#back');
+    backButton.classList.remove('hidden');
+}
+
+function hideBackButton() {
+    const backButton = document.querySelector('#back');
+    backButton.classList.add('hidden');
+}
+
 function wasGucken() {
+    showBackButton();
     const number = Math.floor((Math.random() * 6)) + 1;
     hideFirstStageButtons();
     const h1 = document.querySelector('#text');
@@ -90,16 +119,64 @@ function goBack() {
     const videosThumbnail = document.querySelector('#videosThumbnail');
     videosThumbnail.classList.add("hidden");
     videosThumbnail.src = "";
+    hideBackButton();
 }
 
 function wasEssen() {
     showSecondStageButtons();
-}    
+    showBackButton();
+}
 
-function food(foodType) {
-    switch (foodType) {
+function restaurantPicker(category) {
+    showBackButton();
+    hideSecondStageButtons();
+    hideFirstStageButtons();
+    const h1 = document.querySelector('#text');
+    let number = 0;
+    const videosThumbnail = document.querySelector('#videosThumbnail');
+    h1.classList.add("show");
+    switch (category) {
         case 'burger': 
-            alert("Hello");
+            number = Math.floor(Math.random() * restaurants.burger.length);
+            h1.textContent = restaurants.burger[number];
+            videosThumbnail.src = restaurants.thumbnails[0];
+            videosThumbnail.classList.remove("hidden");           
             break;
-    }
+        case 'indisch': 
+            number = Math.floor(Math.random() * restaurants.indisch.length);
+            h1.textContent = restaurants.indisch[number];
+            videosThumbnail.src = restaurants.thumbnails[1];
+            videosThumbnail.classList.remove("hidden");  
+            break;
+        case 'arabPizza': 
+            number = Math.floor(Math.random() * restaurants.arabPizza.length);
+            h1.textContent = restaurants.arabPizza[number];
+            videosThumbnail.src = restaurants.thumbnails[2];
+            videosThumbnail.classList.remove("hidden");  
+            break;
+        case 'italPizza': 
+            number = Math.floor(Math.random() * restaurants.italPizza.length);
+            h1.textContent = restaurants.italPizza[number];
+            videosThumbnail.src = restaurants.thumbnails[3];
+            videosThumbnail.classList.remove("hidden");  
+            break;
+        case 'sushi': 
+            number = Math.floor(Math.random() * restaurants.sushi.length);
+            h1.textContent = restaurants.sushi[number];
+            videosThumbnail.src = restaurants.thumbnails[4];
+            videosThumbnail.classList.remove("hidden");  
+            break;
+        case 'doener': 
+            number = Math.floor(Math.random() * restaurants.doener.length);
+            h1.textContent = restaurants.doener[number];
+            videosThumbnail.src = restaurants.thumbnails[5];
+            videosThumbnail.classList.remove("hidden");  
+            break;
+        case 'cheap': 
+            number = Math.floor(Math.random() * restaurants.cheap.length);
+            h1.textContent = restaurants.cheap[number];
+            videosThumbnail.src = restaurants.thumbnails[6];
+            videosThumbnail.classList.remove("hidden");  
+            break;
+    } 
 }
