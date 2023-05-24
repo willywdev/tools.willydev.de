@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine Food Picker</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <section class="content">
+      <img
+        src="icons/134226_back_arrow_left_icon.png"
+        id="back"
+        onclick="goBack()" />
+      <h1>Wähle eine Kategorie:</h1>
+
+      <button onclick="wasGucken()" class="firstStage">Was gucken?</button>
+      <button onclick="wasEssen()" class="firstStage">Was essen?</button>
+      <div class="secondStage">
+        <button class="secondStageFood hidden">Burger</button>
+        <button class="secondStageFood hidden">Indisch</button>
+        <button class="secondStageFood hidden">Arab. Pizza</button>
+        <button class="secondStageFood hidden">Ital. Pizza</button>
+        <button class="secondStageFood hidden">Sushi</button>
+        <button class="secondStageFood hidden">Döner</button>
+        <button class="secondStageFood hidden">Günstig</button>
+      </div>
+    </section>
+  </body>
+</html>
