@@ -15,18 +15,20 @@
         src="icons/134226_back_arrow_left_icon.png"
         id="back"
         onclick="goBack()" />
-      <h1>Wähle eine Kategorie:</h1>
+      <h1 id="text">Wähle eine Kategorie:</h1>
 
       <button onclick="wasGucken()" class="firstStage">Was gucken?</button>
       <button onclick="wasEssen()" class="firstStage">Was essen?</button>
       <div class="secondStage">
-        <button class="secondStageFood hidden">Burger</button>
-        <button class="secondStageFood hidden">Indisch</button>
-        <button class="secondStageFood hidden">Arab. Pizza</button>
-        <button class="secondStageFood hidden">Ital. Pizza</button>
-        <button class="secondStageFood hidden">Sushi</button>
-        <button class="secondStageFood hidden">Döner</button>
-        <button class="secondStageFood hidden">Günstig</button>
+        <button onclick="food('burger')" class="secondStageFood hidden">
+          Burger
+        </button>
+        <button onclick="" class="secondStageFood hidden">Indisch</button>
+        <button onclick="" class="secondStageFood hidden">Arab. Pizza</button>
+        <button onclick="" class="secondStageFood hidden">Ital. Pizza</button>
+        <button onclick="" class="secondStageFood hidden">Sushi</button>
+        <button onclick="" class="secondStageFood hidden">Döner</button>
+        <button onclick="" class="secondStageFood hidden">Günstig</button>
       </div>
     </section>
   </body>
