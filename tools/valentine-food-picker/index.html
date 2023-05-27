@@ -13,52 +13,56 @@
       <img
         src="icons/134226_back_arrow_left_icon.png"
         id="back"
-        onclick="goBack()"
+        onclick="siteFunction.goBack()"
         alt="Back"
         class="hidden" />
       <img src="" class="showRight hidden" id="videosThumbnail" />
       <h1 id="text">Wähle eine Kategorie:</h1>
 
-      <button onclick="wasGucken()" class="firstStage">Was gucken?</button>
-      <button onclick="wasEssen()" class="firstStage">Was essen?</button>
+      <button onclick="videos.wasGucken()" class="firstStage">
+        Was gucken?
+      </button>
+      <button onclick="restaurants.wasEssen()" class="firstStage">
+        Was essen?
+      </button>
       <div class="secondStage">
         <button
-          onclick="restaurantPicker('burger')"
+          onclick="restaurants.restaurantPicker('burger')"
           class="secondStageFood hidden">
           Burger
         </button>
         <button
-          onclick="restaurantPicker('indisch')"
+          onclick="restaurants.restaurantPicker('indisch')"
           class="secondStageFood hidden">
           Indisch
         </button>
         <button
-          onclick="restaurantPicker('arabPizza')"
+          onclick="restaurants.restaurantPicker('arabPizza')"
           class="secondStageFood hidden">
           Arab. Pizza
         </button>
         <button
-          onclick="restaurantPicker('italPizza')"
+          onclick="restaurants.restaurantPicker('italPizza')"
           class="secondStageFood hidden">
           Ital. Pizza
         </button>
         <button
-          onclick="restaurantPicker('sushi')"
+          onclick="restaurants.restaurantPicker('sushi')"
           class="secondStageFood hidden">
           Sushi
         </button>
         <button
-          onclick="restaurantPicker('doener')"
+          onclick="restaurants.restaurantPicker('doener')"
           class="secondStageFood hidden">
           Döner
         </button>
         <button
-          onclick="restaurantPicker('cheap')"
+          onclick="restaurants.restaurantPicker('cheap')"
           class="secondStageFood hidden">
           Günstig
         </button>
       </div>
     </section>
-    <script src="main.js"></script>
+    <script src="index.js" defer></script>
   </body>
 </html>
