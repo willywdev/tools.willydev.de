@@ -35,6 +35,14 @@ button:active {
   background-color: #d4d3d3;
 }
 
+.nobutton {
+  background-color: transparent;
+}
+
+.nobutton:hover {
+  background-color: transparent;
+}
+
 input {
   height: 40px;
   width: 80vw;
@@ -45,6 +53,7 @@ input {
   text-align: right;
   padding: 10px;
   font-size: 1.3rem;
+  color: black;
 }
 
 h1 {
