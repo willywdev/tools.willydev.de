@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,4 +81,10 @@ h1 {
   width: 30vw;
   font-size: 1.3rem;
   text-align: center;
+}
+
+@media (min-width: 640px) {
+  input {
+    width: 50vw;
+  }
 }
