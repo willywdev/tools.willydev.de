@@ -74,17 +74,64 @@ h1 {
 }
 
 #history {
-  color: gray;
-  position: absolute;
-  top: 17vh;
-  right: 0;
-  width: 30vw;
+  font-family: Arial;
+  color: rgb(83, 83, 83);
   font-size: 1.3rem;
-  text-align: center;
+  font-weight: bold;
+  width: 80vw;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 20%);
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: white 1px solid;
+  padding-right: 0.25rem;
 }
 
+/* Smaller than phone */
+@media (max-width: 313px) {
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+/* Bigger than phone */
 @media (min-width: 640px) {
   input {
     width: 50vw;
+  }
+  #history {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 768px) {
+  input {
+    width: 40vw;
+  }
+  .parent {
+    grid-gap: 0.5rem;
+  }
+  #history {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .parent {
+    grid-gap: 0.6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  input {
+    width: 30vw;
+  }
+  .parent {
+    grid-gap: 0.7rem;
+  }
+  #history {
+    width: 30vw;
   }
 }
