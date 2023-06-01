@@ -14,13 +14,14 @@
   <body>
     <div class="container">
         <h1>Calculator</h1>
-        <input type="number" placeholder="0" readonly> 
+        <p id="history"></p>
+        <input type="number" id="total" readonly> 
       <div class="parent">
-        <div><button><i class="fa-solid fa-percent fa-xl" style="color: #000000;"></i></button></div>
-        <div><button><i class="fa-solid fa-c fa-lg" style="color: #000000;"></i> <i class="fa-solid fa-e fa-lg" style="color: #000000;"></i></button></div>
-        <div><button><i class="fa-solid fa-c fa-xl" style="color: #000000;"></i></button></div>
+        <div><button id="percentage">%</button></div>
+        <div><button id ="clearAll" data-calc="tasks">CE</div>
+        <div><button id ="clear" data-calc="tasks">C</button></div>
         <div>
-          <button>
+          <button id="delete">
             <i class="fa-solid fa-delete-left fa-xl" style="color: #000000"></i>
           </button>
         </div>
@@ -28,62 +29,61 @@
           <button class="nobutton"></button>
         </div>
         <div>
-          <button><i class="fa-solid fa-superscript fa-xl" style="color: #000000;"></i></button>
+          <button id="superscript"><i class="fa-solid fa-superscript fa-xl" style="color: #000000;"></i></button>
         </div>
         <div>
-        <button><i class="fa-solid fa-square-root-variable fa-xl" style="color: #000000;"></i></button>
+        <button id="square-root"><i class="fa-solid fa-square-root-variable fa-xl" style="color: #000000;"></i></button>
       </div>
       <div>
-        <button><i class="fa-solid fa-divide fa-xl" style="color: #000000;"></i></button>
+        <button id="divide"><i class="fa-solid fa-divide fa-xl" style="color: #000000;"></i></button>
       </div>
       <div>
-        <button><i class="fa-solid fa-7 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">7</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-8 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">8</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-9 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">9</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-xmark fa-xl" style="color: #000000;"></i></button>
+        <button id="multiply"><i class="fa-solid fa-xmark fa-xl" style="color: #000000;"></i></button>
       </div>
       <div>
-        <button><i class="fa-solid fa-4 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">4</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-5 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">5</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-6 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">6</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-minus fa-xl" style="color: #000000;"></i></button>
+        <button id="subtract"><i class="fa-solid fa-minus fa-xl" style="color: #000000;"></i></button>
       </div>
       <div>
-        <button><i class="fa-solid fa-1 fa-xl" style="color: #000000"></i>
-        </button>
+        <button data-calc="numbers">1</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-2 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">2</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-3 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">3</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-plus fa-xl" style="color: #000000;"></i></button>
+        <button id="addition"><i class="fa-solid fa-plus fa-xl" style="color: #000000;"></i></button>
       </div>
       <div>
-        <button><i class="fa-solid fa-plus-minus fa-xl" style="color: #000000;"></i></button>
+        <button id="plusminus"><i class="fa-solid fa-plus-minus fa-xl" style="color: #000000;"></i></button>
       </div>
       <div>
-        <button><i class="fa-solid fa-0 fa-xl" style="color: #000000"></i></button>
+        <button data-calc="numbers">0</button>
       </div>
       <div>
-        <button>,</button>
+        <button data-calc="numbers">.</button>
       </div>
       <div>
-        <button><i class="fa-solid fa-equals fa-xl" style="color: #000000;"></i></button>
+        <button id="equals"><i class="fa-solid fa-equals fa-xl" style="color: #000000;"></i></button>
       </div>
     </div>
   </body>
