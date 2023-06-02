@@ -3,7 +3,7 @@ const playerTwoDice = document.querySelector('.img2');
 const winnerText = document.querySelector('h1');
 
 const playGame = {
-    dice: ["images/dice1.png","images/dice2.png", "images/dice3.png", "images/dice4.png", "images/dice5.png", "images/dice6.png"],
+    dice: ["images/dice1.webp","images/dice2.webp", "images/dice3.webp", "images/dice4.webp", "images/dice5.webp", "images/dice6.webp"],
     rollDice() {
         return Math.floor(Math.random()*6);
     },

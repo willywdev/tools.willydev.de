@@ -53,12 +53,12 @@ const videos = {
           "Rosins Restaurants",
           "Take Me Out!",
           "Date or Drop"],
-    thumbnail: ["images/nahimsky.jpg",
-                "images/firstdates.jpg",
-                "images/sturmimikey.jpg",
-                "images/rosins.jpg",
-                "images/takemeout.jpg",
-                "images/dateordrop.jpg"
+    thumbnail: ["images/nahimsky.webp",
+                "images/firstdates.webp",
+                "images/sturmimikey.webp",
+                "images/rosins.webp",
+                "images/takemeout.webp",
+                "images/dateordrop.webp"
     ],
     wasGucken() {
         siteFunction.showBackButton();
@@ -103,13 +103,13 @@ const restaurants = {
     sushi: ["King Sushi", "Sushi Hub", "Langerfelder Nem Sushi"],
     doener: ["Devrans", "Royal Döner", "Istanbul Grill"],
     cheap: ["Ferman Nachtexpress", "Amirco Pizza & Pasta", "Spices"],
-    thumbnails: ["images/burger.jpg",
-                "images/indisch.jpg",
-                "images/arabpizza.jpg",
-                "images/italpizza.jpg",
-                "images/sushi.jpg",
-                "images/doener.jpg",
-                "images/cheap.jpg"
+    thumbnails: ["images/burger.webp",
+                "images/indisch.webp",
+                "images/arabpizza.webp",
+                "images/italpizza.webp",
+                "images/sushi.webp",
+                "images/doener.webp",
+                "images/cheap.webp"
             ],
     wasEssen() {
         siteFunction.showSecondStageButtons();
