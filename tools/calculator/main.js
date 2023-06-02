@@ -86,25 +86,25 @@
    equals.addEventListener("click", () => {
        if (maths === "+") {
            result = part + parseFloat(total.placeholder);
-           total.placeholder = result.toFixed(2); // Adjust decimal places as needed
+           total.placeholder = result.toFixed(2); 
        } else if (maths === "-") {
            result = part - parseFloat(total.placeholder);
-           total.placeholder = result.toFixed(2); // Adjust decimal places as needed
+           total.placeholder = result.toFixed(2); 
        } else if (maths === "*") {
            result = part * parseFloat(total.placeholder);
-           total.placeholder = result.toFixed(2); // Adjust decimal places as needed
+           total.placeholder = result.toFixed(2);
        } else if (maths === "/") {
            result = part / parseFloat(total.placeholder);
-           total.placeholder = result.toFixed(2); // Adjust decimal places as needed
+           total.placeholder = result.toFixed(2); 
        } else if (maths === "%") {
            result = (parseFloat(total.placeholder) / 100) * part;
-           total.placeholder = result.toFixed(2); // Adjust decimal places as needed
+           total.placeholder = result.toFixed(2); 
        } else if (maths === "superscript") {
            result = Math.pow(part, parseFloat(total.placeholder));
-           total.placeholder = result.toFixed(2); // Adjust decimal places as needed
+           total.placeholder = result.toFixed(2); 
        } else if (maths === "squareroot") {
            result = Math.sqrt(parseFloat(total.placeholder));
-           total.placeholder = result.toFixed(2); // Adjust decimal places as needed
+           total.placeholder = result.toFixed(2); 
        }
        maths = "";
        history.textContent = "";
