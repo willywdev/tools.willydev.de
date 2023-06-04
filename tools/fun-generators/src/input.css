@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slidein {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.slideitin {
+  animation-name: slidein;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+}
+
+.slideitout {
+  animation-name: slideout;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+}
