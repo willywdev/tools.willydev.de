@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,6 +12,7 @@
   <body class="px-4">
     <nav class="navbar bg-primary shadow-lg rounded-lg my-5">
       <div class="navbar-start">
+        <!-- DROPDOWN LINKS -->
         <div class="dropdown z-10">
           <label tabindex="0" class="btn btn-ghost btn-circle text-primary-content">
             <svg
@@ -30,8 +31,24 @@
           <ul
             tabindex="0"
             class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52">
-            <li class="text-secondary-content"><a href="/tools.willydev.de/index.html">Back to Tools</a></li>
-            <li class="text-secondary-content"><a href="https://willydev.de">Portfolio</a></li>
+            <li class="text-secondary-content"><a href="/tools.willydev.de/index.html" class="font-medium text-base">Back to Tools</a></li>
+            <li class="text-secondary-content"><a href="https://willydev.de" class="font-medium text-base">Portfolio</a></li>
+          </ul>
+        </div>
+        <!-- THEME SWITCHER -->
+        <div class="dropdown z-10">
+          <label tabindex="0" class="btn btn-ghost btn-circle text-primary-content">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z"></path>
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52">
+            <li class="text-secondary-content"><a onclick="elements.themeSwitch()" href="" class="font-medium text-base">Light Theme</a></li>
+            <li class="text-secondary-content"><a onclick="elements.themeSwitch()" href="" class="font-medium text-base">Dark Theme</a></li>
+            <li class="text-secondary-content"><a onclick="elements.themeSwitch()" href="" class="font-medium text-base">Cupcake</a></li>
+            <li class="text-secondary-content"><a onclick="elements.themeSwitch()" href="" class="font-medium text-base">Bumblebee</a></li>
           </ul>
         </div>
       </div>
@@ -39,12 +56,12 @@
         <a href="#" class="btn btn-ghost normal-case text-xl text-primary-content"
           >Willy's Generators</a
         >
-        
-
       </div>
       <div class="navbar-end">
         <input id="searchBar" type="text" placeholder="Search ..." class="input input-bordered input-sm w-full max-w-xs invisible" />
-        <button onclick="elements.deleteSearchContent()" class="btn btn-ghost btn-circle invisible text-primary-content" id="deleteSearch"><i class="fa-solid fa-xmark"></i></button>
+        <button onclick="elements.deleteSearchContent()" class="btn btn-ghost btn-circle invisible text-primary-content" id="deleteSearch"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg></button>
         <button onclick="elements.checkSearchBar()" id="search" class="btn btn-ghost btn-circle text-primary-content">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
           </button>
@@ -53,7 +70,7 @@
     </nav>
 
 
-
+<!-- CONTENT START -->
     <main class="my-5 grid grid-cols-1 xl:grid-cols-3 m-auto justify-center">
     <div class="card glass w-96 bg-primary shadow-xl justify-self-center">
         <figure><img src="src/header_QR-code-generator_2x.webp" alt="QR-Code Generator" class=""/></figure>
