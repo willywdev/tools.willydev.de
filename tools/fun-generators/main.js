@@ -9,9 +9,13 @@ const elements = {
   searchBar: document.querySelector("#searchBar"),
   logo: document.querySelector("#logo"),
   deleteSearch: document.querySelector("#deleteSearch"),
+  searchIcon: document.querySelector("#search"),
   /* Getting the Screenwidth of the device used. */
   screenWidth: (width =
     window.innerWidth > 0 ? window.innerWidth : screen.width),
+  themePicker: document.querySelector("#themePicker"),
+  themes: document.querySelectorAll(".themes"),
+  themeHTML: document.querySelector("html"),
   /* Simple function to check if SearchBar is open or closed. Second outer "else if" Statement calls the Search Function */
   checkSearchBar: () => {
     if (!searchBar.value) {
@@ -29,10 +33,16 @@ const elements = {
     if (elements.screenWidth <= 600) {
       logo.classList.add("invisible");
       logo.classList.add("absolute");
+      themePicker.classList.add("invisible");
+      themePicker.classList.add("absolute");
+      search.classList.add("invisible");
+      search.classList.add("absolute");
     }
     searchBar.classList.remove("invisible");
+    searchBar.classList.remove("absolute");
     searchBar.classList.add("slideitin");
     deleteSearch.classList.remove("invisible");
+    deleteSearch.classList.remove("absolute");
     /* Toggling the searchBarStatus, so i can always check, if it is currently open or not */
     searchBarStatus = true;
   },
@@ -40,10 +50,16 @@ const elements = {
     if (elements.screenWidth <= 600) {
       logo.classList.remove("invisible");
       logo.classList.remove("absolute");
+      themePicker.classList.remove("invisible");
+      themePicker.classList.remove("absolute");
+      search.classList.remove("invisible");
+      search.classList.remove("absolute");
     }
     searchBar.classList.remove("slideitin");
     searchBar.classList.add("invisible");
+    searchBar.classList.add("absolute");
     deleteSearch.classList.add("invisible");
+    deleteSearch.classList.add("absolute");
     searchBarStatus = false;
   },
   deleteSearchContent: () => {
@@ -54,6 +70,22 @@ const elements = {
       searchBar.value = "";
       searchAlgo.searchReset();
     }
+  },
+  themeSwitchLight: () => {
+    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
+    elements.themeHTML.setAttribute("data-theme", "light");
+  },
+  themeSwitchDark: () => {
+    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
+    elements.themeHTML.setAttribute("data-theme", "dark");
+  },
+  themeSwitchCupcake: () => {
+    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
+    elements.themeHTML.setAttribute("data-theme", "cupcake");
+  },
+  themeSwitchBumblebee: () => {
+    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
+    elements.themeHTML.setAttribute("data-theme", "bumblebee");
   },
 };
 
