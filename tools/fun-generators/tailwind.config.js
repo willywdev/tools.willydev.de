@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["index.html","main.js"],
+  content: ["index.html", "main.js"],
   theme: {
     extend: {},
   },
+  mode: "jit",
   plugins: [require("daisyui")],
   daisyui: {
-    themes:["cupcake"]
-  }
-}
-
+    themes: ["light", "dark", "cupcake", "bumblebee"],
+  },
+};

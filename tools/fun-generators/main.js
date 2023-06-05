@@ -1,62 +1,92 @@
 let searchBarStatus = false;
 /* Toggling searchBarStatus always, when it changes its state of visible and invisible */
 let errormsg1 = "Nothing Found 😢";
-let errormsg2 = "Please enter more than 2 characters 🫡";
+let errormsg2 = "Please enter more than 1 character 🫡";
 let errormsg3 = "Found something 😁";
 
 const elements = {
-    search: document.querySelector("#search"),
-    searchBar: document.querySelector("#searchBar"),
-    logo: document.querySelector("#logo"),
-    checkSearchBar: () => {
-        /* Checking if anything is written in the SearchBox. If not, it just acts as a toggle. */
-        if (!searchBar.value) {
-            if (searchBar.classList.contains("invisible") === true) {
-                elements.toggleSearchBar();
-            } else if (searchBarStatus === true) {
-                elements.toggleSearchBar();
-            }
-            /* Checking if Text in SearchBox is equal to the error messages, seen later */
-        } else if (searchBar.value != errormsg1 && searchBar.value != errormsg2 && searchBar.value != errormsg3) {
-            searchAlgo.search(searchBar.value);
-            /* Wait after Search, until User sees Error Message. Replace this when you master Async Await */
-            setTimeout(() => {
-                elements.toggleSearchBar();
-                searchBarStatus = false;
-                searchBar.value = "";
-            }, 2000);  
-        }
-    },
-    toggleSearchBar: () => {
-      logo.classList.toggle("invisible");
-      logo.classList.toggle("absolute");
-      searchBar.classList.toggle("invisible");
-      searchBar.classList.toggle("slideitin");
-      /* Toggling the searchBarStatus, so i can always check, if it is currently open or not */
-      if (searchBarStatus === false) {
-        searchBarStatus = true;
+  search: document.querySelector("#searchItems"),
+  searchBar: document.querySelector("#searchBar"),
+  logo: document.querySelector("#logo"),
+  deleteSearch: document.querySelector("#deleteSearch"),
+  /* Getting the Screenwidth of the device used. */
+  screenWidth: (width =
+    window.innerWidth > 0 ? window.innerWidth : screen.width),
+  /* Simple function to check if SearchBar is open or closed. Second outer "else if" Statement calls the Search Function */
+  checkSearchBar: () => {
+    if (!searchBar.value) {
+      if (searchBar.classList.contains("invisible") === true) {
+        elements.openSearchBar();
+        searchBar.focus();
       } else if (searchBarStatus === true) {
-        searchBarStatus = false;
+        elements.closeSearchBar();
       }
-    },
-  };
-  
-const searchAlgo = {
-    getItems: document.querySelectorAll(".searchAlgorithm"),
-    search: (textValue) => {
-        /* Remove length check later, to implement live search. */
-       if (textValue.length > 2) {
-            searchAlgo.getItems.forEach(element => {
-                /* TODO: Toggle Visible/Invisible if characters in SearchBox match any Generators 
-                    Currently: Checks if any Text > 2 Chars is found on Elements with the .searchAlgorithm Class */
-                if(element.textContent.toLowerCase().includes(textValue.toLowerCase())) {
-                    elements.searchBar.value = "Found something 😁";     
-                } else {
-                    elements.searchBar.value = "Nothing Found 😢";
-                }
-            }) 
-        } else {
-            elements.searchBar.value = "Please enter more than 2 characters 🫡";
-            }
-        }
+    } else if (searchBarStatus === true && searchBar.value != "") {
+      searchAlgo.search(searchBar.value);
     }
+  },
+  openSearchBar: () => {
+    if (elements.screenWidth <= 600) {
+      logo.classList.add("invisible");
+      logo.classList.add("absolute");
+    }
+    searchBar.classList.remove("invisible");
+    searchBar.classList.add("slideitin");
+    deleteSearch.classList.remove("invisible");
+    /* Toggling the searchBarStatus, so i can always check, if it is currently open or not */
+    searchBarStatus = true;
+  },
+  closeSearchBar: () => {
+    if (elements.screenWidth <= 600) {
+      logo.classList.remove("invisible");
+      logo.classList.remove("absolute");
+    }
+    searchBar.classList.remove("slideitin");
+    searchBar.classList.add("invisible");
+    deleteSearch.classList.add("invisible");
+    searchBarStatus = false;
+  },
+  deleteSearchContent: () => {
+    if (searchBar.value === "") {
+      elements.closeSearchBar();
+      searchAlgo.searchReset();
+    } else {
+      searchBar.value = "";
+      searchAlgo.searchReset();
+    }
+  },
+};
+
+const searchAlgo = {
+  getItems: document.querySelectorAll(".searchAlgorithm"),
+  search: (textValue) => {
+    /* Remove length check later, to implement live search. */
+    if (textValue.length > 1) {
+      searchAlgo.getItems.forEach((element) => {
+        if (
+          element.textContent.toLowerCase().includes(textValue.toLowerCase())
+        ) {
+          /* Element found. Parent Div found. Do nothing with it, but make any other elements invisible */
+        } else {
+          /* elements.searchBar.value = errormsg1; */
+          /* Add Class of Invisible to all Divs that dont match the Search Bar Input */
+          element.closest(".card").classList.add("invisible");
+          element.closest(".card").classList.add("absolute");
+        }
+      });
+    }
+  },
+  searchReset: () => {
+    searchAlgo.getItems.forEach((element) => {
+      element.closest(".card").classList.remove("invisible");
+      element.closest(".card").classList.remove("absolute");
+    });
+  },
+};
+
+/* Adding EventListeners */
+/* Adding EventListener to look for a change in input(searchbar) */
+searchBar.addEventListener("input", () => {
+  searchAlgo.searchReset();
+  searchAlgo.search(searchBar.value);
+});
