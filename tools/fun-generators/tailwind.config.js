@@ -7,6 +7,6 @@ export default {
   mode: "jit",
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark", "cupcake", "bumblebee"],
+    themes: ["light", "dark", "cupcake", "bumblebee", "dracula"],
   },
 };

@@ -94,6 +94,11 @@ const elements = {
     elements.themeHTML.setAttribute("data-theme", "bumblebee");
     localStorage.setItem("data-theme", "bumblebee");
   },
+  themeSwitchDracula: () => {
+    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
+    elements.themeHTML.setAttribute("data-theme", "dracula");
+    localStorage.setItem("data-theme", "dracula");
+  },
 };
 
 const searchAlgo = {
