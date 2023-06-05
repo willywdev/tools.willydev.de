@@ -3,6 +3,9 @@ let searchBarStatus = false;
 let errormsg1 = "Nothing Found 😢";
 let errormsg2 = "Please enter more than 1 character 🫡";
 let errormsg3 = "Found something 😁";
+const html = document.querySelector("html");
+savedTheme = localStorage.getItem("data-theme");
+html.setAttribute("data-theme", savedTheme);
 
 const elements = {
   search: document.querySelector("#searchItems"),
@@ -74,18 +77,22 @@ const elements = {
   themeSwitchLight: () => {
     /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
     elements.themeHTML.setAttribute("data-theme", "light");
+    localStorage.setItem("data-theme", "light");
   },
   themeSwitchDark: () => {
     /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
     elements.themeHTML.setAttribute("data-theme", "dark");
+    localStorage.setItem("data-theme", "dark");
   },
   themeSwitchCupcake: () => {
     /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
     elements.themeHTML.setAttribute("data-theme", "cupcake");
+    localStorage.setItem("data-theme", "cupcake");
   },
   themeSwitchBumblebee: () => {
     /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
     elements.themeHTML.setAttribute("data-theme", "bumblebee");
+    localStorage.setItem("data-theme", "bumblebee");
   },
 };
 
