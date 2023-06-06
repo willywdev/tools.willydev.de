@@ -1,92 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="../../node_modules/@fortawesome/js/all.min.js"></script>
-
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" href="../../@fortawesome/fontawesome-free/css/all.min.css">
-  </head>
-  <body>
-    <div class="container">
-        <h1>Calculator</h1>
-        <div class="text">
-          <p id="history"></p>
-        </div>
-        <input type="number" id="total" readonly> 
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Simple Calculator</title>
+      <link rel="stylesheet" href="style.css" />
+      <script src="main.js" defer></script>
+   </head>
+   <body>
+      <div class="container">
+      <h1>Calculator</h1>
+      <div class="text">
+         <p id="history"></p>
+      </div>
+      <input type="number" id="total" readonly> 
       <div class="parent">
-        <div><button id="percentage">%</button></div>
-        <div><button id ="clearAll" data-calc="tasks">CE</div>
-        <div><button id ="clear" data-calc="tasks">C</button></div>
-        <div>
-          <button id="delete">
-            <i class="fa-solid fa-delete-left fa-xl" style="color: #000000"></i>
-          </button>
-        </div>
-        <div>
-          <button class="nobutton"></button>
-        </div>
-        <div>
-          <button id="superscript"><i class="fa-solid fa-superscript fa-xl" style="color: #000000;"></i></button>
-        </div>
-        <div>
-        <button id="square-root"><i class="fa-solid fa-square-root-variable fa-xl" style="color: #000000;"></i></button>
+         <div><button id="percentage">%</button></div>
+         <div>
+            <button id ="clearAll" data-calc="tasks">
+               CE
+         </div>
+         <div><button id ="clear" data-calc="tasks">C</button></div>
+         <div>
+            <button id="delete">
+               <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32px">
+                  <path clip-rule="evenodd" fill-rule="evenodd" d="M2.515 10.674a1.875 1.875 0 000 2.652L8.89 19.7c.352.351.829.549 1.326.549H19.5a3 3 0 003-3V6.75a3 3 0 00-3-3h-9.284c-.497 0-.974.198-1.326.55l-6.375 6.374zM12.53 9.22a.75.75 0 10-1.06 1.06L13.19 12l-1.72 1.72a.75.75 0 101.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 101.06-1.06L15.31 12l1.72-1.72a.75.75 0 10-1.06-1.06l-1.72 1.72-1.72-1.72z"></path>
+               </svg>
+         </div>
+         <div>
+         <button class="nobutton"></button>
+         </div>
+         <div>
+            <button id="superscript">
+               <svg class="svg-icon" style="width: 32px; height: 32px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M790.396 512c6.922-21.052 37.592-42.56 72.53-64.85 33.25-21.21 70.934-45.252 100.682-77.724 34.916-38.108 51.888-80.35 51.888-129.134 0-121.124-101.404-176.292-195.62-176.292-84.982 0-152.756 44.032-188.864 100.894-9.308 14.658-5.184 34.072 9.246 43.73l60.656 40.592c14.064 9.412 32.92 6.168 43.26-7.228 16.044-20.788 37.636-36.45 63.334-36.45 38.774 0 52.532 25.802 52.532 47.896 0 72.318-238.874 114.046-238.874 320.048 0 13.308 1.122 26.028 2.83 38.662 2.152 15.928 15.668 27.856 31.74 27.856H992c17.674 0 32-14.326 32-32v-64c0-17.674-14.326-32-32-32H790.396zM544 832c17.674 0 32 14.326 32 32v64c0 17.674-14.326 32-32 32h-124.798a32 32 0 0 1-27.082-14.956l-91.402-145.23c-4.594-6.704-8.844-13.938-12.39-20.418-3.3 6.488-7.294 13.874-11.748 21.164l-89.424 144.294a31.998 31.998 0 0 1-27.2 15.144H32c-17.674 0-32-14.326-32-32v-64c0-17.674 14.326-32 32-32h52.65l113.104-165.418L92.222 512H32c-17.674 0-32-14.326-32-32v-64c0-17.674 14.326-32 32-32h137.612a32 32 0 0 1 27.29 15.288l79.764 130.252c4.144 7.046 8.106 14.342 11.454 20.74 3.554-6.488 7.84-13.908 12.474-21.074l80.664-130.07a32 32 0 0 1 27.196-15.134H544c17.674 0 32 14.326 32 32v64c0 17.674-14.326 32-32 32h-55.958l-105.38 151.342L499.948 832H544z" fill="" />
+               </svg>
+            </button>
+         </div>
+         <div>
+            <button id="square-root">
+               <svg class="svg-icon" style="width: 32px;height: 32px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1152 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1142.62 502.62l-45.24-45.24c-12.5-12.5-32.76-12.5-45.26 0L960 549.5l-92.12-92.12c-12.5-12.5-32.76-12.5-45.26 0l-45.24 45.24c-12.5 12.5-12.5 32.76 0 45.26L869.5 640l-92.12 92.12c-12.5 12.5-12.5 32.76 0 45.26l45.24 45.24c12.5 12.5 32.76 12.5 45.26 0L960 730.5l92.12 92.12c12.5 12.5 32.76 12.5 45.26 0l45.24-45.24c12.5-12.5 12.5-32.76 0-45.26L1050.5 640l92.12-92.12c12.5-12.5 12.5-32.76 0-45.26zM1104 0H615.3c-29.08 0-54.52 19.6-61.9 47.74l-169.58 645.6-116.82-212.2A64.016 64.016 0 0 0 210.94 448H48c-26.5 0-48 21.48-48 48v96c0 26.5 21.5 48 48 48h87.24l177.76 327.46C337.98 1007 372.6 1024 409.88 1024c34.54 0 88.88-18 108.56-82.96L714.06 192H1104c26.5 0 48-21.5 48-48V48c0-26.52-21.5-48-48-48z"  />
+               </svg>
+            </button>
+         </div>
+         <div>
+            <button id="divide">
+               <svg class="svg-icon" style="width: 32px; height: 32px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M512 704c-70.7 0-128 57.3-128 128s57.3 128 128 128 128-57.3 128-128-57.3-128-128-128z m0-384c70.7 0 128-57.3 128-128s-57.3-128-128-128-128 57.3-128 128 57.3 128 128 128z m384 96H128c-35.34 0-64 28.66-64 64v64c0 35.34 28.66 64 64 64h768c35.34 0 64-28.66 64-64v-64c0-35.34-28.66-64-64-64z" fill="" />
+               </svg>
+            </button>
+         </div>
+         <div>
+            <button data-calc="numbers">7</button>
+         </div>
+         <div>
+            <button data-calc="numbers">8</button>
+         </div>
+         <div>
+            <button data-calc="numbers">9</button>
+         </div>
+         <div>
+            <button id="multiply">
+               <svg class="svg-icon" style="width: 32px;height: 32px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M237.933714 731.648c-14.573714 14.573714-14.994286 39.424 0 54.418286 14.573714 14.994286 39.424 14.573714 54.418286 0l219.428571-219.849143 219.867429 219.849143c14.573714 14.573714 39.424 14.994286 53.997714 0 15.433143-14.994286 14.994286-39.862857 0-54.418286l-219.428571-219.867429 219.428571-219.428571c14.994286-14.573714 15.433143-39.862857 0-54.418286-14.573714-14.994286-39.424-14.573714-53.997714 0L511.780571 457.782857l-219.428571-219.849143c-14.994286-14.573714-39.862857-14.994286-54.418286 0-14.994286 14.573714-14.573714 39.862857 0 54.418286l219.428572 219.428571z"  />
+               </svg>
+            </button>
+         </div>
+         <div>
+            <button data-calc="numbers">4</button>
+         </div>
+         <div>
+            <button data-calc="numbers">5</button>
+         </div>
+         <div>
+            <button data-calc="numbers">6</button>
+         </div>
+         <div>
+            <button id="subtract">
+               <svg class="svg-icon" style="width: 32px; height: 32px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M62.811501 463.620879l894.919081 0 0 95.727724-894.919081 0 0-95.727724Z"  />
+               </svg>
+            </button>
+         </div>
+         <div>
+            <button data-calc="numbers">1</button>
+         </div>
+         <div>
+            <button data-calc="numbers">2</button>
+         </div>
+         <div>
+            <button data-calc="numbers">3</button>
+         </div>
+         <div>
+            <button id="addition">
+               <svg class="svg-icon" style="width: 32px; height: 32px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M914.049331 467.620233 554.92923 467.620233 554.92923 108.498086c0-24.334221-19.72525-44.028772-44.031842-44.028772-24.303522 0-44.031842 19.694551-44.031842 44.028772l0 359.122147L107.743398 467.620233c-24.303522 0-44.030819 19.72832-44.030819 44.031842 0 24.337291 19.727297 44.033889 44.030819 44.033889l359.122147 0 0 359.119077c0 24.335245 19.72832 44.031842 44.031842 44.031842 24.306592 0 44.031842-19.696598 44.031842-44.031842l0-359.119077 359.120101 0c24.305569 0 44.031842-19.696598 44.031842-44.033889C958.082196 487.348554 938.354899 467.620233 914.049331 467.620233z"  />
+               </svg>
+            </button>
+         </div>
+         <div>
+            <button id="plusminus">
+               <svg class="svg-icon" style="width: 32px;height: 32px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M808.680727 212.650667a31.030303 31.030303 0 0 1 0 43.876848l-558.545454 558.545455a31.030303 31.030303 0 0 1-43.876849-43.876849l558.545455-558.545454a31.030303 31.030303 0 0 1 43.876848 0zM104.075636 296.649697a31.030303 31.030303 0 0 1 31.030303-31.030303h310.303031a31.030303 31.030303 0 1 1 0 62.060606h-310.303031a31.030303 31.030303 0 0 1-31.030303-31.030303z" fill="#303133" />
+                  <path d="M290.257455 110.467879a31.030303 31.030303 0 0 1 31.030303 31.030303v310.30303a31.030303 31.030303 0 0 1-62.060606 0v-310.30303a31.030303 31.030303 0 0 1 31.030303-31.030303zM538.499879 731.073939a31.030303 31.030303 0 0 1 31.030303-31.030303h310.30303a31.030303 31.030303 0 1 1 0 62.060606h-310.30303a31.030303 31.030303 0 0 1-31.030303-31.030303z" fill="#303133" />
+               </svg>
+            </button>
+         </div>
+         <div>
+            <button data-calc="numbers">0</button>
+         </div>
+         <div>
+            <button data-calc="numbers">.</button>
+         </div>
+         <div>
+            <button id="equals">
+               <svg class="svg-icon" style="width: 32px; height: 32px;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M896 608H128c-35.34 0-64 28.66-64 64v64c0 35.34 28.66 64 64 64h768c35.34 0 64-28.66 64-64v-64c0-35.34-28.66-64-64-64z m0-384H128c-35.34 0-64 28.66-64 64v64c0 35.34 28.66 64 64 64h768c35.34 0 64-28.66 64-64v-64c0-35.34-28.66-64-64-64z" fill="" />
+               </svg>
+            </button>
+         </div>
       </div>
-      <div>
-        <button id="divide"><i class="fa-solid fa-divide fa-xl" style="color: #000000;"></i></button>
-      </div>
-      <div>
-        <button data-calc="numbers">7</button>
-      </div>
-      <div>
-        <button data-calc="numbers">8</button>
-      </div>
-      <div>
-        <button data-calc="numbers">9</button>
-      </div>
-      <div>
-        <button id="multiply"><i class="fa-solid fa-xmark fa-xl" style="color: #000000;"></i></button>
-      </div>
-      <div>
-        <button data-calc="numbers">4</button>
-      </div>
-      <div>
-        <button data-calc="numbers">5</button>
-      </div>
-      <div>
-        <button data-calc="numbers">6</button>
-      </div>
-      <div>
-        <button id="subtract"><i class="fa-solid fa-minus fa-xl" style="color: #000000;"></i></button>
-      </div>
-      <div>
-        <button data-calc="numbers">1</button>
-      </div>
-      <div>
-        <button data-calc="numbers">2</button>
-      </div>
-      <div>
-        <button data-calc="numbers">3</button>
-      </div>
-      <div>
-        <button id="addition"><i class="fa-solid fa-plus fa-xl" style="color: #000000;"></i></button>
-      </div>
-      <div>
-        <button id="plusminus"><i class="fa-solid fa-plus-minus fa-xl" style="color: #000000;"></i></button>
-      </div>
-      <div>
-        <button data-calc="numbers">0</button>
-      </div>
-      <div>
-        <button data-calc="numbers">.</button>
-      </div>
-      <div>
-        <button id="equals"><i class="fa-solid fa-equals fa-xl" style="color: #000000;"></i></button>
-      </div>
-    </div>
-  </body>
+   </body>
 </html>
