@@ -1,171 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/bootstrap-icons.css">
-    <title>Willy's Tools</title>
-    <script src="bootstrap.bundle.min.js"></script>
-  </head>
-  <body class="p-3 bg-dark mb-5">
-    <nav class="navbar fixed-top bg-primary navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles/styles.css">
+      <link rel="stylesheet" href="styles/bootstrap.css">
+      <link rel="stylesheet" href="styles/bootstrap-icons.css">
+      <title>Willy's Tools</title>
+      <script src="styles/bootstrap.bundle.min.js"></script>
+   </head>
+   <body class="p-3 bg-dark mb-5">
+      <nav class="navbar fixed-top bg-primary navbar-expand-lg navbar-light">
+         <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+         <img
             src="images/wrench-adjustable-circle-fill.svg"
             alt="Logo"
             width="30"
             height="24"
             class="d-inline-block align-text-top" />
-            
-          <span class="text-light fs-2 fw-semibold" id="header-text">Willy's Tools</span>
-        </a>
-        <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" id="hamburger-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+         <span class="text-light fs-2 fw-semibold" id="header-text">Willy's Tools</span>
+         </a>
+         <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon" id="hamburger-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item ms-auto">
-                <a class="nav-link active text-light fw-semibold" aria-current="page" href="#"><button type="button" class="btn btn-outline-light"><i class="bi bi-house-door-fill"></i> Home</button></a>
-              </li>
-              <li class="nav-item ms-auto">
-                <a class="nav-link text-light fw-semibold" href="https://willydev.de" target="_blank"><button type="button" class="btn btn-outline-light"><i class="bi bi-book-fill"></i> Portfolio Page</button></a>
-              </li>
-              <li class="nav-item ms-auto">
-                <a class="nav-link text-light fw-semibold" href="#second-section"><button type="button" class="btn btn-outline-light"><i class="bi bi-gear-wide-connected"></i> Tools</button></a>
-              </li>
+               <li class="nav-item ms-auto">
+                  <a class="nav-link active text-light fw-semibold" aria-current="page" href="#"><button type="button" class="btn btn-outline-light"><i class="bi bi-house-door-fill"></i> Home</button></a>
+               </li>
+               <li class="nav-item ms-auto">
+                  <a class="nav-link text-light fw-semibold" href="https://willydev.de" target="_blank"><button type="button" class="btn btn-outline-light"><i class="bi bi-book-fill"></i> Portfolio Page</button></a>
+               </li>
+               <li class="nav-item ms-auto">
+                  <a class="nav-link text-light fw-semibold" href="#second-section"><button type="button" class="btn btn-outline-light"><i class="bi bi-gear-wide-connected"></i> Tools</button></a>
+               </li>
             </ul>
-      </div>
-    </nav>
-    <section class="landing">
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-        <h1 class="display-4 fw-bold text-body-emphasis" id="landing-h1">Hi, these are my Mini-Tools</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4 text-light">Tools that i created during my programming career. <br> I'm currently on a learning journey and always trying to improve my skills.</p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <a href="#second-section"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Check out Tools</button></a>
-            
-          </div>
-        </div>
-        <div class="overflow-hidden" style="max-height: 30vh;">
-          <div class="container px-5">
-            <img src="images/altumcode-zE007SNgcdE-unsplash.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Picture of Code on a Macbook" width="700" height="500" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section><section class="second-section" id="second-section">
-    <div class="container mt-5 h-auto">
-      <div class="container text-center ml-auto">
-        <div class="row row-gap-3">
-          <div class="col col-gap-1">
-            <div class="card mx-auto ml-auto" style="width: 18rem; height: 28rem">
-              <a href="tools/fun-generators/" class="card-link"><img src="" class="card-img-top" alt="picture of code"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Willy's Generators</h5>
-                  <p class="card-text">More complex site with different Generators like a QR Code Generator.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i> 05.06.2023</li>
-                  <li class="list-group-item">Made with <img src="images/tailwind-css.png" alt="Tailwind CSS" height="16px"> <i class="fa-brands fa-html5 fa-2xl" style="color: #e34c26;"></i> <i class="fa-brands fa-js fa-2xl" style="color: #f7df1e;"></i></li>
-                </ul>
-                <div class="card-body">
-                  <a href="tools/fun-generators/" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
-                  <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/fun-generators" target="_blank" card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
-                  
-                </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card mx-auto" style="width: 18rem; height: 28rem">
-              <a href="tools/calculator/" class="card-link"><img src="images/calculator.webp" class="card-img-top" alt="picture of code"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Simple Calculator</h5>
-                  <p class="card-text">A simple calculator app that performs basic arithmetic operations and providing a user-friendly interface.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i>  01.06.2023</li>
-                  <li class="list-group-item">Made with  <i class="fa-brands fa-css3-alt fa-2xl" style="color: #264de4;"></i> <i class="fa-brands fa-html5 fa-2xl" style="color: #e34c26;"></i> <i class="fa-brands fa-js fa-2xl" style="color: #f7df1e;"></i></li>
-                  
-                  
-                </ul>
-                <div class="card-body">
-                  <a href="tools/calculator/" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
-                  <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/calculator" target="_blank" class="card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
-                  
-                </div>
-              </div>
-              
-          </div>
-          <div class="col">
-            <div class="card mx-auto" style="width: 18rem; height: 28rem">
-              <a href="tools/valentine-food-picker/" class="card-link"><img src="images/valentinefoodpicker.webp" class="card-img-top" alt="picture of code"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Valentine Food Picker</h5>
-                  <p class="card-text">Working only for me personally. Picks a Show or Restaurant for Food.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i>  24.05.2023</li>
-                  <li class="list-group-item">Made with  <i class="fa-brands fa-css3-alt fa-2xl" style="color: #264de4;"></i> <i class="fa-brands fa-html5 fa-2xl" style="color: #e34c26;"></i> <i class="fa-brands fa-js fa-2xl" style="color: #f7df1e;"></i></li>
-                  
-                  
-                </ul>
-                <div class="card-body">
-                  <a href="tools/valentine-food-picker/" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
-                  <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/valentine-food-picker" target="_blank" class="card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
-                  
-                </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card mx-auto" style="width: 18rem; height: 28rem">
-              <a href="tools/dice-game/" class="card-link"><img src="images/playdice.webp" class="card-img-top" alt="picture of code"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Dice Game</h5>
-                  <p class="card-text">Play a Game of Dice. Two players only. Really simple Minigame. </p><br>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i>  27.05.2023</li>
-                  <li class="list-group-item">Made with  <i class="fa-brands fa-js fa-2xl" style="color: #f7df1e;"></i></li>
-                  
-                  
-                </ul>
-                <div class="card-body">
-                  <a href="tools/dice-game/" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
-                  <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/dice-game" target="_blank" class="card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
-                  
-                </div>
-              </div>
-              
-          </div>
-          <div class="col">
-            <div class="card mx-auto" style="width: 18rem; height: 28rem">
-              <a href="tools/keydown/keydown.html" class="card-link"><img src="images/keydownkeycode.webp" class="card-img-top" alt="picture of code"></a>
-                <div class="card-body">
-                  <h5 class="card-title">keydown KeyCode</h5>
-                  <p class="card-text">Shows the keycode of a specific key on your keyboard. Can be used in programming.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i>  18.05.2023</li>
-                  <li class="list-group-item">Made with  <i class="fa-brands fa-js fa-2xl" style="color: #f7df1e;"></i></li>
-                  
-                  
-                </ul>
-                <div class="card-body">
-                  <a href="tools/keydown/keydown.html" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
-                  <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/keydown" target="_blank" class="card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
-                  
-                </div>
-              </div>
-          </div>
-          </div>
-    </section>
-    
-
-
-      
-  </body>
+         </div>
+      </nav>
+      <section class="landing">
+         <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h1 class="display-4 fw-bold text-body-emphasis" id="landing-h1">Hi, these are my Mini-Tools</h1>
+            <div class="col-lg-6 mx-auto">
+               <p class="lead mb-4 text-light">Tools that i created during my programming career. <br> I'm currently on a learning journey and always trying to improve my skills.</p>
+               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                  <a href="#second-section"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Check out Tools</button></a>
+               </div>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+               <div class="container px-5">
+                  <img src="images/altumcode-zE007SNgcdE-unsplash.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Picture of Code on a Macbook" width="700" height="500" loading="lazy">
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="second-section" id="second-section">
+         <div class="container mt-5 h-auto">
+         <div class="container text-center ml-auto">
+         <div class="row row-gap-3">
+            <div class="col col-gap-1">
+               <div class="card mx-auto ml-auto" style="width: 18rem; height: 28rem">
+                  <a href="tools/fun-generators/" class="card-link"><img src="" class="card-img-top" alt="picture of code"></a>
+                  <div class="card-body">
+                     <h5 class="card-title">Willy's Generators</h5>
+                     <p class="card-text">More complex site with different Generators like a QR Code Generator.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i> 05.06.2023</li>
+                     <li class="list-group-item">
+                        Made with 
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0" fill="#38b2ac"></path>
+                        </svg>
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
+                           <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+                           <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path>
+                           <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+                        </svg>
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
+                           <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+                        </svg>
+                     </li>
+                  </ul>
+                  <div class="card-body">
+                     <a href="tools/fun-generators/" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
+                     <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/fun-generators" target="_blank" card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="card mx-auto" style="width: 18rem; height: 28rem">
+                  <a href="tools/calculator/" class="card-link"><img src="images/calculator.webp" class="card-img-top" alt="picture of code"></a>
+                  <div class="card-body">
+                     <h5 class="card-title">Simple Calculator</h5>
+                     <p class="card-text">A simple calculator app that performs basic arithmetic operations and providing a user-friendly interface.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i>  01.06.2023</li>
+                     <li class="list-group-item">
+                        Made with  
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path>
+                           <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path>
+                           <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"></path>
+                           <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path>
+                           <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"></path>
+                           <path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path>
+                        </svg>
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
+                           <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+                           <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path>
+                           <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+                        </svg>
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
+                           <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+                        </svg>
+                     </li>
+                  </ul>
+                  <div class="card-body">
+                     <a href="tools/calculator/" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
+                     <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/calculator" target="_blank" class="card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="card mx-auto" style="width: 18rem; height: 28rem">
+                  <a href="tools/valentine-food-picker/" class="card-link"><img src="images/valentinefoodpicker.webp" class="card-img-top" alt="picture of code"></a>
+                  <div class="card-body">
+                     <h5 class="card-title">Valentine Food Picker</h5>
+                     <p class="card-text">Working only for me personally. Picks a Show or Restaurant for Food.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i>  24.05.2023</li>
+                     <li class="list-group-item">
+                        Made with  
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path>
+                           <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path>
+                           <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"></path>
+                           <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path>
+                           <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"></path>
+                           <path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path>
+                        </svg>
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
+                           <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+                           <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path>
+                           <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+                        </svg>
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
+                           <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+                        </svg>
+                     </li>
+                  </ul>
+                  <div class="card-body">
+                     <a href="tools/valentine-food-picker/" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
+                     <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/valentine-food-picker" target="_blank" class="card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="card mx-auto" style="width: 18rem; height: 28rem">
+                  <a href="tools/dice-game/" class="card-link"><img src="images/playdice.webp" class="card-img-top" alt="picture of code"></a>
+                  <div class="card-body">
+                     <h5 class="card-title">Dice Game</h5>
+                     <p class="card-text">Play a Game of Dice. Two players only. Really simple Minigame. </p>
+                     <br>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i>  27.05.2023</li>
+                     <li class="list-group-item">
+                        Made width
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path>
+                           <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path>
+                           <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"></path>
+                           <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path>
+                           <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"></path>
+                           <path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path>
+                        </svg>
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"></path>
+                           <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"></path>
+                           <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"></path>
+                           <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+                        </svg>
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
+                           <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+                        </svg>
+                        </i>
+                     </li>
+                  </ul>
+                  <div class="card-body">
+                     <a href="tools/dice-game/" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
+                     <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/dice-game" target="_blank" class="card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="card mx-auto" style="width: 18rem; height: 28rem">
+                  <a href="tools/keydown/keydown.html" class="card-link"><img src="images/keydownkeycode.webp" class="card-img-top" alt="picture of code"></a>
+                  <div class="card-body">
+                     <h5 class="card-title">keydown KeyCode</h5>
+                     <p class="card-text">Shows the keycode of a specific key on your keyboard. Can be used in programming.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item"><i class="fa-solid fa-calendar-days" style="color: #373434;"></i>  18.05.2023</li>
+                     <li class="list-group-item">
+                        Made with 
+                        <svg viewBox="0 0 128 128" width="24px" height="24px">
+                           <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
+                           <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+                        </svg>
+                        </i>
+                     </li>
+                  </ul>
+                  <div class="card-body">
+                     <a href="tools/keydown/keydown.html" class="card-link"><button type="button" class="btn btn-primary btn-sm">Proceed</button></a>
+                     <a href="https://github.com/willywdev/tools.willydev.de/tree/master/tools/keydown" target="_blank" class="card-link"><button type="button" class="btn btn-outline-success btn-sm">Show Code</button></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </body>
 </html>
