@@ -5,7 +5,7 @@ export default {
     extend: {},
   },
   mode: "jit",
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("tailwindcss-animated")],
   daisyui: {
     themes: ["light", "dark", "cupcake", "bumblebee", "dracula"],
   },

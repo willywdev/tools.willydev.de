@@ -19,6 +19,7 @@ const elements = {
   screenWidth: (width =
     window.innerWidth > 0 ? window.innerWidth : screen.width),
   themePicker: document.querySelector("#themePicker"),
+  firstSection: document.querySelector(".first-section"),
   /* Simple function to check if SearchBar is open or closed. Second outer "else if" Statement calls the Search Function */
   checkSearchBar: () => {
     if (!searchBar.value) {
@@ -73,6 +74,12 @@ const elements = {
       searchBar.value = "";
       searchAlgo.searchReset();
     }
+  },
+  openGenerator: () => {
+    elements.firstSection.classList.add("opacity-0");
+    setTimeout(() => {
+      elements.firstSection.classList.add("hidden");
+    }, 200);
   },
 };
 
