@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Lobster";
+  src: url(fonts/Lobster-Regular.ttf);
+}
+@font-face {
+  font-family: "Indie Flower";
+  src: url(fonts/IndieFlower-Regular.ttf);
+}
+
 .container {
   width: 100%;
   margin: auto;
