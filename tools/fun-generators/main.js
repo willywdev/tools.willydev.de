@@ -1,10 +1,5 @@
 /* Toggling searchBarStatus always, when it changes its state of visible and invisible */
 let searchBarStatus = false;
-/* Getting DOM Elements for Theme Switching and setting theme based on localStorage */
-const html = document.querySelector("html");
-savedTheme = localStorage.getItem("data-theme");
-html.setAttribute("data-theme", savedTheme);
-
 /* Theme Switcher */
 const themen = document.querySelectorAll(".themes");
 themen.forEach((e) => {
