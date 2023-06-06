@@ -1,27 +1,24 @@
 body {
-  background-color: #303030;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 50px;
-}
-
-h1 {
-  font-size: 72px;
-  margin-bottom: 30px;
-}
-
-p {
-  font-size: 24px;
-  margin-bottom: 30px;
+img {
+  width: 20vw;
 }
 
 a {
-  color: #ffffff;
   text-decoration: none;
+  color: rgb(194, 194, 194);
+}
+
+#contribution {
+  color: rgb(194, 194, 194);
+}
+
+p {
+  width: 50vw;
+  text-align: center;
 }
