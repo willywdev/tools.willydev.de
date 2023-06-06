@@ -1,11 +1,18 @@
-let searchBarStatus = false;
 /* Toggling searchBarStatus always, when it changes its state of visible and invisible */
-let errormsg1 = "Nothing Found 😢";
-let errormsg2 = "Please enter more than 1 character 🫡";
-let errormsg3 = "Found something 😁";
+let searchBarStatus = false;
+/* Getting DOM Elements for Theme Switching and setting theme based on localStorage */
 const html = document.querySelector("html");
 savedTheme = localStorage.getItem("data-theme");
 html.setAttribute("data-theme", savedTheme);
+
+/* Theme Switcher */
+const themen = document.querySelectorAll(".themes");
+themen.forEach((e) => {
+  e.addEventListener("click", () => {
+    html.setAttribute("data-theme", e.dataset.name);
+    localStorage.setItem("data-theme", e.dataset.name);
+  });
+});
 
 const elements = {
   search: document.querySelector("#searchItems"),
@@ -17,8 +24,6 @@ const elements = {
   screenWidth: (width =
     window.innerWidth > 0 ? window.innerWidth : screen.width),
   themePicker: document.querySelector("#themePicker"),
-  themes: document.querySelectorAll(".themes"),
-  themeHTML: document.querySelector("html"),
   /* Simple function to check if SearchBar is open or closed. Second outer "else if" Statement calls the Search Function */
   checkSearchBar: () => {
     if (!searchBar.value) {
@@ -74,31 +79,6 @@ const elements = {
       searchAlgo.searchReset();
     }
   },
-  themeSwitchLight: () => {
-    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
-    elements.themeHTML.setAttribute("data-theme", "light");
-    localStorage.setItem("data-theme", "light");
-  },
-  themeSwitchDark: () => {
-    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
-    elements.themeHTML.setAttribute("data-theme", "dark");
-    localStorage.setItem("data-theme", "dark");
-  },
-  themeSwitchCupcake: () => {
-    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
-    elements.themeHTML.setAttribute("data-theme", "cupcake");
-    localStorage.setItem("data-theme", "cupcake");
-  },
-  themeSwitchBumblebee: () => {
-    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
-    elements.themeHTML.setAttribute("data-theme", "bumblebee");
-    localStorage.setItem("data-theme", "bumblebee");
-  },
-  themeSwitchDracula: () => {
-    /* Determine which Theme got picked. Then send the Theme as a parameter to next Function getNewTheme() */
-    elements.themeHTML.setAttribute("data-theme", "dracula");
-    localStorage.setItem("data-theme", "dracula");
-  },
 };
 
 const searchAlgo = {
@@ -127,7 +107,6 @@ const searchAlgo = {
     });
   },
 };
-
 /* Adding EventListeners */
 /* Adding EventListener to look for a change in input(searchbar) */
 searchBar.addEventListener("input", () => {

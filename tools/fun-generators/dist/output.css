@@ -1058,13 +1058,6 @@ html {
     background-color: hsl(var(--b3) / var(--tw-bg-opacity));
   }
 
-  .btn-primary:hover {
-    --tw-border-opacity: 1;
-    border-color: hsl(var(--pf) / var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: hsl(var(--pf) / var(--tw-bg-opacity));
-  }
-
   .btn-secondary:hover {
     --tw-border-opacity: 1;
     border-color: hsl(var(--sf) / var(--tw-border-opacity));
@@ -1350,26 +1343,6 @@ html {
   outline-width: 2px;
   outline-offset: 2px;
   outline-color: hsl(var(--bc) / 1);
-}
-
-.btn-primary {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
-
-.btn-primary.btn-active {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pf) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf) / var(--tw-bg-opacity));
-}
-
-.btn-primary:focus-visible {
-  outline-color: hsl(var(--p) / 1);
 }
 
 .btn-secondary {
@@ -2083,10 +2056,6 @@ html {
   height: 1.25rem;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
@@ -2097,10 +2066,6 @@ html {
 
 .w-96 {
   width: 24rem;
-}
-
-.w-4 {
-  width: 1rem;
 }
 
 .grid-cols-1 {
@@ -2168,11 +2133,6 @@ html {
   text-transform: none;
 }
 
-.text-accent-focus {
-  --tw-text-opacity: 1;
-  color: hsl(var(--af) / var(--tw-text-opacity));
-}
-
 .text-primary-content {
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
@@ -2181,16 +2141,6 @@ html {
 .text-secondary-content {
   --tw-text-opacity: 1;
   color: hsl(var(--sc) / var(--tw-text-opacity));
-}
-
-.text-accent-content {
-  --tw-text-opacity: 1;
-  color: hsl(var(--ac) / var(--tw-text-opacity));
-}
-
-.text-primary-focus {
-  --tw-text-opacity: 1;
-  color: hsl(var(--pf) / var(--tw-text-opacity));
 }
 
 .text-secondary-focus {

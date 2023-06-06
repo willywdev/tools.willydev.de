@@ -31,7 +31,7 @@
           <ul
             tabindex="0"
             class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52">
-            <li class="text-secondary-content"><a href="/tools.willydev.de/index.html" class="font-medium text-base">Back to Tools</a></li>
+            <li class="text-secondary-content"><a href="https://tools.willydev.de/" class="font-medium text-base">Back to Tools</a></li>
             <li class="text-secondary-content"><a href="https://willydev.de" class="font-medium text-base">Portfolio</a></li>
           </ul>
         </div>
@@ -45,11 +45,11 @@
           <ul
             tabindex="0"
             class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52">
-            <li class="text-secondary-content"><a onclick="elements.themeSwitchLight()" class="font-medium text-base themes">Light Theme</a></li>
-            <li class="text-secondary-content"><a onclick="elements.themeSwitchDark()" class="font-medium text-base themes">Dark Theme</a></li>
-            <li class="text-secondary-content"><a onclick="elements.themeSwitchCupcake()" class="font-medium text-base themes">Cupcake</a></li>
-            <li class="text-secondary-content"><a onclick="elements.themeSwitchBumblebee()" class="font-medium text-base themes">Bumblebee</a></li>
-            <li class="text-secondary-content"><a onclick="elements.themeSwitchDracula()" class="font-medium text-base themes">Dracula</a></li>
+            <li class="text-secondary-content"><a data-name="light" class="font-medium text-base themes">Light Theme</a></li>
+            <li class="text-secondary-content"><a data-name="dark" class="font-medium text-base themes">Dark Theme</a></li>
+            <li class="text-secondary-content"><a data-name="cupcake" class="font-medium text-base themes">Cupcake</a></li>
+            <li class="text-secondary-content"><a data-name="bumblebee" class="font-medium text-base themes">Bumblebee</a></li>
+            <li class="text-secondary-content"><a data-name="dracula" class="font-medium text-base themes">Dracula</a></li>
 
           </ul>
         </div>
@@ -72,12 +72,12 @@
 <!-- CONTENT START -->
     <main class="my-5 grid grid-cols-1 gap-4 xl:grid-cols-3 m-auto justify-center">
     <div class="card glass w-96 bg-primary shadow-xl justify-self-center">
-        <figure><img src="src/header_QR-code-generator_2x.webp" alt="QR-Code Generator" class=""/></figure>
+        <figure><img src="src/qrcodegenerator.png" alt="QR-Code Generator" class=""/></figure>
         <div class="card-body text-primary-content">
           <h2 class="card-title searchAlgorithm">QR Code Generator</h2>
           <p>Build with Node.js<img src="src/nodelogo.png"></p>
           <div class="card-actions justify-end">
-            <button class="btn btn-sm btn-outline btn-accent text-primary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <button class="btn btn-sm btn-accent text-primary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"></path>
             </svg>Show Code</button>
             <button class="btn btn-sm btn-secondary text-secondary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -92,7 +92,7 @@
           <h2 class="card-title searchAlgorithm">WS Code Generator</h2>
           <p>Build with Node.js<img src="src/nodelogo.png"></p>
           <div class="card-actions justify-end">
-            <button class="btn btn-sm btn-outline btn-accent text-secondary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <button class="btn btn-sm btn-accent text-secondary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"></path>
             </svg>Show Code</button>
             <button class="btn btn-sm btn-secondary text-secondary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -107,7 +107,7 @@
           <h2 class="card-title searchAlgorithm">LZ Code Generator</h2>
           <p>Build with Node.js<img src="src/nodelogo.png"></p>
           <div class="card-actions justify-end">
-            <button class="btn btn-sm btn-outline btn-accent text-secondary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <button class="btn btn-sm btn-accent text-secondary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"></path>
             </svg>Show Code</button>
             <button class="btn btn-sm btn-secondary text-secondary-content"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
